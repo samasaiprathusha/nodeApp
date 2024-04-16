@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madlib Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #FFFFE0;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Welcome to My Madlib Form</h2>
+    <p>Please fill below details</p>
+    <form action="/process-form" method="POST">
+        <label for="noun">Noun:</label>
+        <input type="text" id="noun" name="noun" required>
+        
+        <label for="verb">Verb:</label>
+        <input type="text" id="verb" name="verb" required>
+        
+        <label for="adjective">Adjective:</label>
+        <input type="text" id="adjective" name="adjective" required>
+        
+        <label for="adverb">Adverb:</label>
+        <input type="text" id="adverb" name="adverb" required>
+        
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place" required>
+        
+        <button type="submit">Generate Madlib</button>
+    </form>
+</div>
+<div>
+    <h2>Addendum</h2>
+    <p>This HTML code creates a Madlib form webpage, ensuring compatibility with HTML5 standards through a doctype declaration. The metadata includes specifications for character encoding and viewport settings, and the title of the page is set as "Madlib Form." The styling segment is responsible for customizing the appearance of various page elements, such as fonts, background colors, and the layout of the form itself. Inside the body, there's a designated container for the form inputs (noun, verb, adjective, adverb, and place), accompanied by labels for each input field and a visually appealing submit button designed to enhance user interaction. Moreover, a JavaScript snippet is incorporated to dynamically retrieve and showcase the document's last modified date in the footer section. In summary, this code combines visual appeal, functionality, and responsiveness to create an engaging Madlib form webpage.The HTML document starts with an opening `<html>` tag that declares the language as English and includes a `<head>` section where metadata and styling are defined. Inside the `<body>` tags, the webpage's visible content like form inputs and a submission button is structured. The form is configured to send data to a specific endpoint (`/process-form`) using the POST method, usually involving backend processing. Towards the end of the body, JavaScript code dynamically updates the document's last modified date, improving the user experience with real-time information. This integration of HTML, CSS, and JavaScript results in an engaging and informative Madlib form webpage, ideal for user interactions and data handling.The `package-lock.json` file within a Node.js project overseen by npm is crucial for specifying precise package versions and their dependencies, thereby ensuring uniformity across different environments. It contains essential metadata such as the project's name and version, while the `"requires"` field mandates that dependencies are installed based on this lockfile. Within the `"packages"` section, details like installed package names, versions, sources, integrity hashes, dependencies, and compatibility information are listed. This file plays a vital role in guaranteeing reproducibility and stability during the `npm install` process, effectively averting version conflicts and upholding consistent functionality across various development setups.This snippet of code is from a `package.json` file in a Node.js project managed by npm. It defines the project's dependencies, including Express.js and Morgan middleware. The `"dependencies"` section lists these packages along with the compatible versions required for the project. For instance, `"express": "^4.19.2"` indicates that the project needs Express.js version 4.19.2 or any compatible version within the 4.x range, while `"morgan": "^1.10.0"` specifies a similar requirement for the Morgan middleware version 1.10.0 or any compatible version within the 1.x range. When developers run `npm install` in this project, npm will automatically fetch and install these specified dependencies, ensuring consistent and reproducible development environments across team members and different machines.This Node.js server using Express sets up middleware for parsing form data and logging requests. It defines routes for generating a random number and processing form data to create a Mad Lib sentence. The server dynamically selects a port based on a command-line argument and starts listening for incoming connections.</p>
+</div>
+
+<footer>
+    <p>Last updated: 
+        <span id="lastModified"></span>
+    </p>
+</footer>
+<script type="text/javascript">
+     var x = document.lastModified;
+     document.getElementById('lastModified').textContent = x;
+</script>
+</body>
+
+
+</html>
